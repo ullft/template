@@ -1,0 +1,24 @@
+{
+  // ファイルアイコンテーマ
+  "workbench.iconTheme": "material-icon-theme",
+  // ファイルの自動保存
+  "files.autoSave": "afterDelay",
+  // ファイルの自動保存の遅延
+  "files.autoSaveDelay": 500,
+  // 1つのタブに相当する半角スペースの数
+  "editor.tabSize": 2,
+  // 開いたファイルからインデント設定を自動判別しない
+  "editor.detectIndentation": false,
+  // 既定のフォーマッター
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // 改行される文字数の変更
+  "prettier.printWidth": 360,
+  // ファイル保存時に自動でフォーマット
+  "editor.formatOnSave": true,
+  // 貼り付け時に自動でフォーマット
+  "editor.formatOnPaste": true,
+  // ブラケットに色をつける
+  "editor.bracketPairColorization.enabled": true,
+  // ドラッグアンドドロップでの移動を無効化
+  "editor.dragAndDrop": false
+}
