@@ -1,0 +1,45 @@
+@use "../variables" as v;
+
+/* ブレイクポイント
+-----------------------------------------*/
+$bp_sp_max: 768px;
+$bp_pc_min: 769px;
+
+$breakpoints: (
+  "sp": "screen and (max-width: #{$bp_sp_max})",
+  "pc": "screen and (min-width: #{$bp_pc_min})",
+) !default;
+
+@mixin mq($breakpoint: sp) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+/* レイアウト比
+-----------------------------------------*/
+@mixin aspect_ratio($width, $height) {
+  overflow: hidden;
+  aspect-ratio: #{$width} / #{$height};
+  > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  @supports not (aspect-ratio: #{$width} / #{$height}) {
+    position: relative;
+    width: $width + rem;
+    &::before {
+      content: "";
+      display: block;
+      padding-top: round(($height / $width) * 100% * 100) / 100;
+    }
+    > img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}

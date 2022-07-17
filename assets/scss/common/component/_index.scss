@@ -1,0 +1,21 @@
+@use "../../global" as g;
+// @include g.sample;
+// @include g.sample(custom);
+
+/* コンポーネント01
+-----------------------------------------*/
+// @mixin sample($type: g.$init_type) {
+//   @if ($type == "default") {
+//   }
+//   @else if($type == "custom") {
+//   }
+// }
+
+/* コンポーネント02
+-----------------------------------------*/
+// @mixin sample($type: g.$init_type) {
+//   @if ($type == "default") {
+//   }
+//   @else if($type == "custom") {
+//   }
+// }
